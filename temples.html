@@ -72,18 +72,7 @@
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 
-    <script>
-        // Set current year dynamically in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Set last modified date dynamically in footer
-        document.getElementById('lastModified').textContent = document.lastModified;
-
-        // Toggle mobile navigation menu
-        function toggleMenu() {
-            const navList = document.getElementById('navList');
-            navList.classList.toggle('visible');
-        }
-    </script>
+    <!-- Link to external JS file with the 'defer' attribute -->
+    <script src="scripts/temples.js" defer></script>
 </body>
 </html>
