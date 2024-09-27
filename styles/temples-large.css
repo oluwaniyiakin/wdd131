@@ -1,8 +1,4 @@
-/* Larger screen styles */
-nav ul {
-    display: flex;
-    justify-content: center;
-}
+/* Desktop layout styles */
 
 .album {
     display: grid;
@@ -18,9 +14,38 @@ nav ul {
     }
 }
 
-/* For really large screens */
 @media (min-width: 1200px) {
     .album {
-        grid-template-columns: repeat(4, 1fr); /* You can increase this if needed */
+        grid-template-columns: repeat(4, 1fr); /* Increase columns for larger screens */
     }
+}
+
+/* Header and navigation styles for larger screens */
+header {
+    background-color: #4B0082;
+    color: white;
+    padding: 20px 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 16px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
 }

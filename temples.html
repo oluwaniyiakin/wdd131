@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An album showcasing beautiful temple images, including responsive designs for various screen sizes.">
+    <meta name="author" content="Oluwaniyi Akin-Oladapo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Temple Album</title>
     <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
-    <script defer src="scripts/temples.js"></script>
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 1024px)">
 </head>
-
 <body>
     <header>
         <h1>Temple Album</h1>
+        <button onclick="toggleMenu()">&#9776;</button>
         <nav>
-            <ul>
+            <ul id="navList">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
@@ -28,48 +29,61 @@
         <h2>Home</h2>
         <section class="album">
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
             <figure>
-                <img src="images/temple-image.jpeg" alt="San Diego Temple">
+                <img src="images/temple-image.jpeg" alt="San Diego California Temple">
                 <figcaption>San Diego California</figcaption>
             </figure>
         </section>
     </main>
 
     <footer>
-        <p>©<span id="year"></span> | OLUWANIYI AKIN OLADAPO 🌸 LAGOS, NIGERIA</p>
+        <p>&copy; <span id="year"></span> Oluwaniyi Akin-Oladapo - Madagascar</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-</body>
 
+    <script>
+        // Set current year dynamically in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Set last modified date dynamically in footer
+        document.getElementById('lastModified').textContent = document.lastModified;
+
+        // Toggle mobile navigation menu
+        function toggleMenu() {
+            const navList = document.getElementById('navList');
+            navList.classList.toggle('visible');
+        }
+    </script>
+</body>
 </html>
