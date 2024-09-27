@@ -1,0 +1,91 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+    padding-top: 10px;
+}
+
+footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Album grid for mobile view */
+.album {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Hamburger button (mobile only) */
+button {
+    display: none;
+    background-color: #4B0082;
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Ensure responsive behavior on mobile */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    button {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.visible {
+        display: block;
+    }
+}
