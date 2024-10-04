@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Lagos, Nigeria</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Lagos, Nigeria</h1>
+    </header>
+    
+    <main class="main-content">
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <picture>
+                <source srcset="nigeria1-large.webp" media="(min-width: 768px)">
+                <img src="images/nigeria.jpeg" alt="Beautiful view of Lagos, Nigeria" class="hero-image">
+            </picture>
+        </section>
+
+        <!-- Data Section -->
+        <section class="data-section">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 1,171.28 sq km</li>
+                <li><strong>Population:</strong> 14.8 million</li>
+                <li><strong>Capital:</strong> Lagos</li>
+                <li><strong>Languages:</strong> English, Yoruba</li>
+                <li><strong>Currency:</strong> Nigerian Naira</li>
+                <li><strong>Time Zone:</strong> WAT (UTC+1)</li>
+                <li><strong>Calling Code:</strong> +234</li>
+                <li><strong>Internet TLD:</strong> .ng</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <ul>
+                <li><strong>Temperature:</strong> 30°C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind Speed:</strong> 10 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windChill">Calculating...</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Oluwaniyi Akin, Lagos, Nigeria. Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

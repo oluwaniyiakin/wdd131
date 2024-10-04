@@ -1,0 +1,71 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #007bff;  /* Lagos flag color */
+    --secondary-color: #008751;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.data-section, .weather-section {
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-section h2, .weather-section h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.weather-icon {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: var(--text-color);
+    color: #ccc;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .weather-icon {
+        display: none; /* Hide the emoji in mobile view */
+    }
+
+    .weather-section h2::after {
+        content: url('weather.svg'); /* Use SVG for mobile weather icon */
+    }
+}
