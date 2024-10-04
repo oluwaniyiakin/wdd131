@@ -1,8 +1,11 @@
+/* Defining global variables in :root */
 :root {
     --primary-color: #008753;
     --secondary-color: #EF3340;
     --text-color: #ffffff;
     --background-color: #f4f4f4;
+    --heading-font-size: 1.5rem;
+    --body-font-size: 1rem;
 }
 
 * {
@@ -54,12 +57,21 @@ main {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: var(--heading-font-size);
     margin-bottom: 0.5rem;
 }
 
 ul {
     list-style-type: none;
+}
+
+/* Styling for the weather icon */
+.weather-icon {
+    display: block;
+    margin: 0 auto;
+    width: 60px; /* Adjust this size as necessary */
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -69,7 +81,8 @@ footer {
     padding: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+/* Correct @media query syntax */
+@media (max-width: 768px) {
     main {
         flex-direction: column;
         padding: 1rem;
@@ -82,5 +95,9 @@ footer {
 
     .data, .weather {
         padding: 1rem;
+    }
+
+    .weather-icon {
+        width: 50px; /* Smaller icon size for mobile view */
     }
 }
