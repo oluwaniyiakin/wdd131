@@ -1,25 +1,20 @@
-// Script to update footer date and windchill factor
+document.addEventListener('DOMContentLoaded', () => {
+    const lastModifiedElement = document.getElementById('lastModified');
+    lastModifiedElement.textContent = document.lastModified;
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Update last modified date
-    document.getElementById("lastModified").textContent = document.lastModified;
+    const temperature = 30; // Static temperature value in Celsius
+    const windSpeed = 10; // Static wind speed value in km/h
 
-    // Static values for temperature and wind speed
-    const temperature = 30;  // in °C
-    const windSpeed = 10;    // in km/h
+    const windChillElement = document.getElementById('windChill');
+    const windChillValue = calculateWindChill(temperature, windSpeed);
 
-    // Calculate and display wind chill
-    const windChillElement = document.getElementById("windChill");
-    windChillElement.textContent = calculateWindChill(temperature, windSpeed);
-});
+    windChillElement.textContent = windChillValue;
 
-// Function to calculate wind chill based on temperature and wind speed
-function calculateWindChill(temp, speed) {
-    // Check if wind chill calculation conditions are met
-    if (temp <= 10 && speed > 4.8) {
-        // Wind chill formula in °C: 13.12 + 0.6215T - 11.37V^0.16 + 0.3965T*V^0.16
-        return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(2) + "°C";
-    } else {
-        return "N/A";  // Not applicable
+    function calculateWindChill(temp, speed) {
+        if (temp <= 10 && speed > 4.8) {
+            const windChill = (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(1);
+            return `${windChill} °C`;
+        }
+        return "N/A";
     }
-}
+});

@@ -1,71 +1,77 @@
-/* Global CSS Variables */
 :root {
-    --primary-color: #007bff;  /* Lagos flag color */
-    --secondary-color: #008751;
-    --text-color: #333;
+    --primary-color: #008753;
+    --secondary-color: #EF3340;
+    --text-color: #ffffff;
     --background-color: #f4f4f4;
+    --font-family: 'Arial', sans-serif;
 }
 
-body, html {
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
     background-color: var(--background-color);
+    color: #333;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.header, .footer {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 15px 0;
-}
-
-.main-content {
-    padding: 20px;
-}
-
-.hero-image {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.data-section, .weather-section {
-    background-color: white;
-    margin: 15px 0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.data-section h2, .weather-section h2 {
+header {
     background-color: var(--secondary-color);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
 }
 
-.weather-icon {
-    font-size: 1.5em;
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
-.footer {
-    background-color: var(--text-color);
-    color: #ccc;
-    padding: 10px;
+.hero {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.data-weather {
+    flex: 1;
+}
+
+.data, .weather {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
 }
 
 @media (max-width: 768px) {
-    .weather-icon {
-        display: none; /* Hide the emoji in mobile view */
-    }
-
-    .weather-section h2::after {
-        content: url('weather.svg'); /* Use SVG for mobile weather icon */
+    main {
+        flex-direction: column;
     }
 }
