@@ -3,7 +3,6 @@
     --secondary-color: #EF3340;
     --text-color: #ffffff;
     --background-color: #f4f4f4;
-    --font-family: 'Arial', sans-serif;
 }
 
 * {
@@ -13,7 +12,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: #333;
 }
@@ -70,8 +69,18 @@ footer {
     padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     main {
         flex-direction: column;
+        padding: 1rem;
+    }
+
+    .hero {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .data, .weather {
+        padding: 1rem;
     }
 }
