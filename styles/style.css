@@ -81,6 +81,14 @@ footer {
     padding: 1rem;
 }
 
+/* Add ::after pseudo-element for footer */
+footer::after {
+    content: " ★"; /* Add a decorative star symbol after the footer text */
+    color: yellow;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+
 /* Correct @media query syntax */
 @media (max-width: 768px) {
     main {
