@@ -24,24 +24,28 @@
     padding: 10px;
     background-color: #b22222;
     color: white;
+    position: relative;
   }
   
-  /* Example of using ::after pseudo-element */
+  /* Proper usage of ::after pseudo-element */
   header::after {
-    content: " - Welcome to Lagos";
-    font-size: 18px;
-    color: #fff;
-    display: block;
-    margin-top: 5px;
+    content: " - Explore Lagos!";
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  /* Adding another ::after pseudo-element to footer */
+  /* Another ::after pseudo-element used in the footer */
   footer::after {
-    content: " | Enjoy your visit!";
+    content: "Thank you for visiting Lagos!";
+    display: block;
     font-size: 14px;
     color: #fff;
-    display: inline-block;
-    margin-left: 10px;
+    text-align: center;
+    margin-top: 10px;
   }
   
   img {
