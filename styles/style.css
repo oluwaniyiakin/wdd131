@@ -1,84 +1,103 @@
-/* General Reset */
+/* Defining global variables in :root */
+:root {
+    --primary-color: #008753;
+    --secondary-color: #EF3340;
+    --text-color: #ffffff;
+    --background-color: #f4f4f4;
+    --heading-font-size: 1.5rem;
+    --body-font-size: 1rem;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     color: #333;
-    margin: 0;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  header {
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem;
     text-align: center;
-    padding: 10px;
-    background-color: #b22222;
-    color: white;
-  }
-  
-  /* Adding ::after pseudo-element to the container */
-  .container::after {
-    content: "";
-    display: block;
-    clear: both;
-    height: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.hero {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero img {
     width: 100%;
-    background: url('images/naija.webp') no-repeat;
-    opacity: 0.1;
-  }
-  
-  img {
-    max-width: 100%;
     height: auto;
-  }
-  
-  .data, .weather {
-    padding: 20px;
-    background-color: white;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .data h2, .weather h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-  }
-  
-  .data p, .weather p {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-  
-  .weather-icon {
-    width: 50px;
-    height: 50px;
+}
+
+.data-weather {
+    flex: 1;
+}
+
+.data, .weather {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: var(--heading-font-size);
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Styling for the weather icon */
+.weather-icon {
     display: block;
-    margin: 0 auto 20px;
-  }
-  
-  footer {
+    margin: 0 auto;
+    width: 60px; /* Adjust this size as necessary */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
-    padding: 20px;
-    background-color: #b22222;
-    color: white;
-    margin-top: 20px;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .data, .weather {
-      margin: 10px 0;
-      padding: 15px;
+    padding: 1rem;
+}
+
+/* Correct @media query syntax */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 1rem;
     }
-  }
-  
+
+    .hero {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .data, .weather {
+        padding: 1rem;
+    }
+
+    .weather-icon {
+        width: 50px; /* Smaller icon size for mobile view */
+    }
+}
