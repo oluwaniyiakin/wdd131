@@ -49,7 +49,7 @@ const temples = [
       area: 116642,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add more temple objects here (3+ additional objects).
+    // Add more temple objects here.
   ];
   
   // DOM references
@@ -114,17 +114,21 @@ const temples = [
       generateTempleCards(smallTemples);
   }
   
-  // Event Listeners for navigation buttons
-  document.querySelector('#home').addEventListener('click', () => generateTempleCards(temples));
+  function showAllTemples() {
+      generateTempleCards(temples);
+  }
+  
+  // Event Listeners for navigation
   document.querySelector('#old').addEventListener('click', filterOldTemples);
   document.querySelector('#new').addEventListener('click', filterNewTemples);
   document.querySelector('#large').addEventListener('click', filterLargeTemples);
   document.querySelector('#small').addEventListener('click', filterSmallTemples);
+  document.querySelector('#home').addEventListener('click', showAllTemples);
   
-  // Display all temples on page load
-  generateTempleCards(temples);
+  // Initial load: show all temples
+  showAllTemples();
   
-  // Footer update for current year and last modified date
+  // Footer date management
   document.getElementById('currentYear').textContent = new Date().getFullYear();
   document.getElementById('lastModified').textContent = document.lastModified;
   
