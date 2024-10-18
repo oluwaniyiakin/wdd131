@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A product review form for gathering customer feedback on various products.">
+    <meta name="description" content="Product review form for gathering customer feedback on various products.">
     <meta name="author" content="Oluwaniyi Akin-Oladapo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Product Review Form</title>
@@ -21,15 +21,15 @@
         <h1>Product Review</h1>
     </header>
 
-    <!-- Form Element with Correct Attributes -->
+    <!-- Corrected Form Attributes -->
     <form id="product-review-form" method="GET" action="review.html">
-        <!-- Product Name -->
+        <!-- Product Name Dropdown -->
         <label for="product-name">Product Name</label>
         <select id="product-name" name="productName" required>
             <option value="" disabled selected>Choose a Product ...</option>
         </select>
 
-        <!-- Overall Rating -->
+        <!-- Rating Section -->
         <label for="rating">Overall Rating</label>
         <div id="rating">
             <input type="radio" id="star1" name="rating" value="1" required>
@@ -48,7 +48,7 @@
             <label for="star5">★</label>
         </div>
 
-        <!-- Date of Installation -->
+        <!-- Date Installed -->
         <label for="date-installed">Date of Installation</label>
         <input type="date" id="date-installed" name="installationDate" required>
 
@@ -68,7 +68,7 @@
             <label for="design">Design</label>
         </div>
 
-        <!-- Written Review -->
+        <!-- Review Text -->
         <label for="review">Written Review (Optional)</label>
         <textarea id="review" name="writtenReview" rows="5"></textarea>
 
