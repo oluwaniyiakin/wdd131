@@ -29,9 +29,9 @@
             <option value="" disabled selected>Choose a Product ...</option>
         </select>
 
-        <!-- Rating Section -->
-        <label for="rating">Overall Rating</label>
-        <div id="rating">
+        <!-- Rating Section (Fixed Label Issue) -->
+        <fieldset>
+            <legend>Overall Rating</legend>
             <input type="radio" id="star1" name="rating" value="1" required>
             <label for="star1">★</label>
 
@@ -46,15 +46,15 @@
 
             <input type="radio" id="star5" name="rating" value="5">
             <label for="star5">★</label>
-        </div>
+        </fieldset>
 
         <!-- Date Installed -->
         <label for="date-installed">Date of Installation</label>
         <input type="date" id="date-installed" name="installationDate" required>
 
-        <!-- Useful Features -->
-        <label for="useful-features">Which features did you find useful in the product? (Check all that apply)</label>
-        <div id="useful-features">
+        <!-- Useful Features (Fixed Label Issue) -->
+        <fieldset>
+            <legend>Which features did you find useful in the product? (Check all that apply)</legend>
             <input type="checkbox" id="durability" name="features" value="Durability">
             <label for="durability">Durability</label>
 
@@ -66,7 +66,7 @@
 
             <input type="checkbox" id="design" name="features" value="Design">
             <label for="design">Design</label>
-        </div>
+        </fieldset>
 
         <!-- Review Text -->
         <label for="review">Written Review (Optional)</label>
