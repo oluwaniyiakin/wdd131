@@ -14,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Link to External CSS File -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Product Review</h1>
     </header>
 
-    <!-- Updated Form Attributes and Structure -->
+    <!-- Form to Submit Review -->
     <form id="product-review-form" method="get" action="review.html">
         <!-- Product Name Dropdown -->
         <label for="product-name">Product Name</label>
@@ -29,21 +29,17 @@
             <option value="" disabled selected>Choose a Product ...</option>
         </select>
 
-        <!-- Rating Section (Fixed Label Issue) -->
+        <!-- Rating Section -->
         <fieldset>
             <legend>Overall Rating</legend>
             <input type="radio" id="star1" name="rating" value="1" required>
             <label for="star1">★</label>
-
             <input type="radio" id="star2" name="rating" value="2">
             <label for="star2">★</label>
-
             <input type="radio" id="star3" name="rating" value="3">
             <label for="star3">★</label>
-
             <input type="radio" id="star4" name="rating" value="4">
             <label for="star4">★</label>
-
             <input type="radio" id="star5" name="rating" value="5">
             <label for="star5">★</label>
         </fieldset>
@@ -52,18 +48,15 @@
         <label for="date-installed">Date of Installation</label>
         <input type="date" id="date-installed" name="installationDate" required>
 
-        <!-- Useful Features (Fixed Label Issue) -->
+        <!-- Useful Features -->
         <fieldset>
             <legend>Which features did you find useful in the product? (Check all that apply)</legend>
             <input type="checkbox" id="durability" name="features" value="Durability">
             <label for="durability">Durability</label>
-
             <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use">
             <label for="ease-of-use">Ease of Use</label>
-
             <input type="checkbox" id="performance" name="features" value="Performance">
             <label for="performance">Performance</label>
-
             <input type="checkbox" id="design" name="features" value="Design">
             <label for="design">Design</label>
         </fieldset>
@@ -86,6 +79,6 @@
     </footer>
 
     <!-- External JS File with Defer -->
-    <script src="scripts/script.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

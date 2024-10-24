@@ -71,17 +71,3 @@ footer {
 footer p {
     color: #4b1b69;
 }
-
-#rating label {
-    font-size: 20px;
-    color: #f4b400;
-}
-
-#rating input[type="radio"] {
-    display: none;
-}
-
-#rating label:hover,
-#rating input[type="radio"]:checked ~ label {
-    color: #f4b400;
-}

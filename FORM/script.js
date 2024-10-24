@@ -22,11 +22,3 @@ window.onload = function () {
     const lastModified = document.getElementById('last-modified');
     lastModified.textContent = document.lastModified;
 }
-
-// Review Submission Counter
-if (window.location.pathname === '/review.html') {
-    let reviewCount = localStorage.getItem('reviewCount') || 0;
-    reviewCount++;
-    localStorage.setItem('reviewCount', reviewCount);
-    document.body.innerHTML += `<p>Thank you for submitting your review! You have submitted ${reviewCount} reviews so far.</p>`;
-}
