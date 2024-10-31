@@ -1,15 +1,15 @@
 // Student data with corresponding picture paths
 const students = [
-    { name: "Student 1", dob: "2015-05-15", height: "120 cm", about: "Loves painting and reading.", imgSrc: "images/picture1.jpg" },
-    { name: "Student 2", dob: "2014-08-20", height: "125 cm", about: "Enjoys soccer and playing with friends.", imgSrc: "images/picture2.jpg" },
-    { name: "Student 3", dob: "2015-12-10", height: "119 cm", about: "Favorite subjects are math and science.", imgSrc: "images/picture3.jpg" },
-    { name: "Student 4", dob: "2014-04-02", height: "122 cm", about: "Avid reader and puzzle solver.", imgSrc: "images/picture4.jpg" },
-    { name: "Student 5", dob: "2015-09-28", height: "118 cm", about: "Loves drawing and sports.", imgSrc: "images/picture5.jpg" },
-    { name: "Student 6", dob: "2014-06-18", height: "124 cm", about: "Plays piano and loves music.", imgSrc: "images/picture6.jpg" },
-    { name: "Student 7", dob: "2015-03-22", height: "121 cm", about: "Great at storytelling.", imgSrc: "images/picture7.jpg" },
-    { name: "Student 8", dob: "2014-11-30", height: "126 cm", about: "Enjoys arts and crafts.", imgSrc: "images/picture8.jpg" },
-    { name: "Student 9", dob: "2015-07-19", height: "123 cm", about: "Soccer player and runner.", imgSrc: "images/picture9.jpg" },
-    { name: "Student 10", dob: "2014-02-14", height: "127 cm", about: "Loves to sing and dance.", imgSrc: "images/picture10.jpg" }
+    { name: "Student 1", dob: "2015-05-15", height: "120 cm", about: "Loves painting and reading.", imgSrc: "images/picture1.jpeg" },
+    { name: "Student 2", dob: "2014-08-20", height: "125 cm", about: "Enjoys soccer and playing with friends.", imgSrc: "images/picture2.jpeg" },
+    { name: "Student 3", dob: "2015-12-10", height: "119 cm", about: "Favorite subjects are math and science.", imgSrc: "images/picture3.jpeg" },
+    { name: "Student 4", dob: "2014-04-02", height: "122 cm", about: "Avid reader and puzzle solver.", imgSrc: "images/picture4.jpeg" },
+    { name: "Student 5", dob: "2015-09-28", height: "118 cm", about: "Loves drawing and sports.", imgSrc: "images/picture5.jpeg" },
+    { name: "Student 6", dob: "2014-06-18", height: "124 cm", about: "Plays piano and loves music.", imgSrc: "images/picture6.jpeg" },
+    { name: "Student 7", dob: "2015-03-22", height: "121 cm", about: "Great at storytelling.", imgSrc: "images/picture7.jpeg" },
+    { name: "Student 8", dob: "2014-11-30", height: "126 cm", about: "Enjoys arts and crafts.", imgSrc: "images/picture8.jpeg" },
+    { name: "Student 9", dob: "2015-07-19", height: "123 cm", about: "Soccer player and runner.", imgSrc: "images/picture9.jpeg" },
+    { name: "Student 10", dob: "2014-02-14", height: "127 cm", about: "Loves to sing and dance.", imgSrc: "images/picture10.jpeg" }
 ];
 
 // Function to load student data
